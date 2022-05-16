@@ -1,7 +1,7 @@
 export default async function (infoSections: Array<string>, lang: string) {
   try {
     const promisses = infoSections
-      .map(section => `http://localhost:1337/api/infos/${section}?locale=${lang}`)
+      .map(section => `https://e5f2-2806-2f0-90e5-feee-5097-849d-cfbd-85e6.ngrok.io/api/infos/${section}?locale=${lang}`)
       .map(endpoint => fetch(`${endpoint}`).then(res => res.json()))
 
     const allData = await Promise.all(promisses)
