@@ -62,6 +62,7 @@
 		.hljs-title.class_.inherited__ {
 			color: #ACFD66;
       white-space: pre-wrap;
+			word-break: break-all;
 		}
 		.hljs-built_in,
 		.hljs-doctag,
