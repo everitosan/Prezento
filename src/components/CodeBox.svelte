@@ -140,7 +140,13 @@
 	@import '../styles/_colors.scss';
 	.CodeBox {
 		border: solid 1px $gray;
-    font-size: 1em;
+    font-size: 0.8em;
+	}
+
+	@media screen and (min-width: 377px) {
+		.CodeBox {
+			font-size: 1em;
+		}
 	}
 
 	@media screen and (min-width: 780px) {
