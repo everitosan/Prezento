@@ -5,18 +5,8 @@
 <script context="module" >
   import loadCvInfo from "../data/cv"
 
-  const infoSections = [
-    "1", // Intro
-    "3", // Formation
-    "2", // Experience
-    "5", // Certifications
-    "4", // Achievements
-    "6", // Courses
-    "7", // Skills
-  ]
-
   export const load = async () => {
-    return loadCvInfo(infoSections, "en") 
+    return loadCvInfo("en") 
   }
 
 </script>
