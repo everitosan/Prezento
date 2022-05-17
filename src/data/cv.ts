@@ -1,14 +1,21 @@
-export default async function (infoSections: Array<string>, lang: string) {
+type StrapiResponse = {
+  id: number,
+  attributes: {
+    content: string,
+    language: string,
+    order: number
+  }
+}
+
+export default async function (lang: string) {
   try {
-    const promisses = infoSections
-      .map(section => `https://e5f2-2806-2f0-90e5-feee-5097-849d-cfbd-85e6.ngrok.io/api/infos/${section}?locale=${lang}`)
-      .map(endpoint => fetch(`${endpoint}`).then(res => res.json()))
+    const url = `https://prezento-strapi.herokuapp.com/api/infos?locale[$eq]=${lang}`
 
-    const allData = await Promise.all(promisses)
+    const allData = await fetch(`${url}`).then(res => res.json())
 
-    const filtered = allData.map(full => ({
-      code: full.data.attributes.content,
-      language: full.data.attributes.language
+    const filtered = allData.data.map((full: StrapiResponse) => ({
+      code: full.attributes.content,
+      language: full.attributes.language
     }))
 
     return {
