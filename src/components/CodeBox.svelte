@@ -42,10 +42,12 @@
 		.hljs-attr,
 		.hljs-link,
 		.hljs-literal,
-		.hljs-number,
 		.hljs-symbol,
 		.hljs-variable.constant_ {
 			color: #40B1FF;
+		}
+		.hljs-number {
+			color: #FF73FD;
 		}
 		.hljs-class .hljs-title,
 		.hljs-title,
