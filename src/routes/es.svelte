@@ -26,6 +26,8 @@
 <script lang="ts">
   import CV from "../components/CV.svelte"
   import MainWrapper from  "../components/MainWrapper.svelte"
+  import Hero from "../components/Hero.svelte"
+
 
   type Data = {
     code: string,
@@ -36,6 +38,7 @@
 </script>
 
 <MainWrapper>
+  <Hero />
   <CV data={data}/>
 </MainWrapper>
 

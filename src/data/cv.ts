@@ -9,7 +9,7 @@ type StrapiResponse = {
 
 export default async function (lang: string) {
   try {
-    const url = `https://prezento-strapi.herokuapp.com/api/infos?locale[$eq]=${lang}`
+    const url = `https://prezento-strapi.herokuapp.com/api/infos?locale[$eq]=${lang}&sort[0]=order`
 
     const allData = await fetch(`${url}`).then(res => res.json())
 

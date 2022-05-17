@@ -16,6 +16,7 @@
 
 <script context="module" >
   import loadCvInfo from "../data/cv"
+  import Hero from "../components/Hero.svelte"
 
   export const load = async () => {
     return loadCvInfo("en") 
@@ -36,6 +37,7 @@
 </script>
 
 <MainWrapper>
+  <Hero />
   <CV data={data}/>
 </MainWrapper>
 
