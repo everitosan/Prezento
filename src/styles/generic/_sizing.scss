@@ -1,0 +1,5 @@
+$base_sizing: 8px;
+
+@function sizing($x) {
+  @return $base_sizing * $x;
+}

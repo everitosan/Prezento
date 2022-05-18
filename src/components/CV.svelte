@@ -18,8 +18,7 @@
 </div>
 
 <style lang="scss">
-	@import '../styles/_colors.scss';
-	@import '../styles/global.scss';
+	@import '../styles/settings/_colors.scss';
 
 	.cvWrapper {
     align-items: flex-start;
