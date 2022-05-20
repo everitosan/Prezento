@@ -1,0 +1,6 @@
+@use "../tokens/figma";
+
+@mixin codeText {
+  font-family: figma.$base-fontFamily-roboto;
+  text-transform: uppercase;
+}

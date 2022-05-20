@@ -1,3 +1,5 @@
+import { baseUrl } from "./constants"
+
 type StrapiResponse = {
   id: number,
   attributes: {
@@ -9,7 +11,7 @@ type StrapiResponse = {
 
 export default async function (lang: string) {
   try {
-    const url = `https://prezento-strapi.herokuapp.com/api/infos?locale[$eq]=${lang}&sort[0]=order`
+    const url = `${baseUrl}/api/infos?locale[$eq]=${lang}&sort[0]=order`
 
     const allData = await fetch(`${url}`).then(res => res.json())
 
@@ -18,11 +20,8 @@ export default async function (lang: string) {
       language: full.attributes.language
     }))
 
-    return {
-      props: {
-        data: filtered
-      }
-    }
+    return filtered
+
   } catch(e) {
     return { props: {data: {} }}
   }

@@ -17,7 +17,7 @@
     font-size: 0.4em;
     text-align: center;
     padding: 5em 0;
-    font-family: 'Arimo', sans-serif;
+    // font-family: 'Arimo', sans-serif;
   }
 
   @media screen and (min-width: 450px) {
@@ -26,13 +26,13 @@
     }
   }
 
-  @media screen and (min-width: 975px) {
+  @media screen and (min-width: 960px) {
     h1 {
       font-size: 1.2em;
     }
   }
 
-  @media screen and (min-width: 1435px) {
+  @media screen and (min-width: 1410px) {
     h1 {
       font-size: 2em;
     }

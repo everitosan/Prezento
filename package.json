@@ -2,6 +2,7 @@
   "name": "cvterminsvelte",
   "version": "0.0.1",
   "scripts": {
+    "token": "style-dictionary build -c src/styles/tokens/config.json",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
@@ -24,6 +25,7 @@
     "eslint-plugin-svelte3": "^4.0.0",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
+    "style-dictionary": "^3.7.0",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
     "svelte-highlight": "^6.0.1",
@@ -33,6 +35,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.31",
     "sass": "^1.51.0"
   }
 }

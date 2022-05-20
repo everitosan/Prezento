@@ -6,30 +6,63 @@
 
 <script context="module" >
   import loadCvInfo from "../data/cv"
-
+  import loadNetworkInfo from "../data/network"
+  import { list } from "../data/locale"
+  
   export const load = async () => {
-    return loadCvInfo("es") 
+    const cv = await loadCvInfo("es")
+    const locales = await list()
+    const networks = await loadNetworkInfo()
+    
+    return  {
+      props: {
+        data: {
+          locales,
+          networks,
+          cv
+        }
+      }
+    }
   }
 
 </script>
 
 <script lang="ts">
-  import CV from "../components/CV.svelte"
   import MainWrapper from  "../components/MainWrapper.svelte"
   import Hero from "../components/Hero.svelte"
-
+  import Header from "../components/Header.svelte"
+  import LangSelector from "../components/Select.svelte"
+  import NavLinks from "../components/NavLinks.svelte"
+  import CV from "../components/CV.svelte"
+  import type { Option, Network } from "../data/dtos"
 
   type Data = {
-    code: string,
-    language: string
+    locales: Option[],
+    networks: Network[],
+    cv: [
+      {
+        code: string,
+        language: string
+      }
+    ]
   } 
   
-  export let data: Array<Data>
+  export let data: Data
+
+
 </script>
 
 <MainWrapper>
+  <Header>
+    <NavLinks networks={data.networks} />
+    <LangSelector options={data.locales} onChange={(opt) => {
+      if(opt.id === 1) {
+        window.location.href = "/"
+      }
+    }} />
+  </Header>
   <Hero />
-  <CV data={data}/>
+  <CV data={data.cv}/>
 </MainWrapper>
 
 

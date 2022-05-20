@@ -1,0 +1,13 @@
+{
+  "source": ["src/styles/tokens/tokens.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "src/styles/tokens/",
+      "files": [{
+        "destination": "_figma.scss",
+        "format": "scss/variables"
+      }]
+    }
+  }
+}
