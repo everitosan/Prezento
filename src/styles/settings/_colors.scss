@@ -3,3 +3,39 @@ $mainDark: #90e40f;
 $gray: #444444;
 $smoke: #7C7C7C;
 $white: #fff;
+
+/*
+* Base Tokens
+*/
+
+$base-color-green: #ACFD66;
+$base-color-green-mid: #8BCC52;
+$base-color-green-dark: #68993E;
+
+$base-color-blue: #40B1FF;
+$base-color-blue-dark: #0F5E8B;
+
+$base-color-purple: #E023FF;
+$base-color-purple-dark: #871599;
+
+$base-color-gray: #444444;
+$base-color-smoke: #7C7C7C;
+$base-color-white: #fff;
+
+/*
+* Set Tokens
+*/ 
+
+// Dark theme
+$set-onDark-color-main: $base-color-green;
+$set-onDark-color-contrast: $base-color-purple;
+$set-onDark-color-contrast-dark: $base-color-purple-dark;
+$set-onDark-color-contrast-2: $base-color-white;
+
+// Ligth theme
+$set-onLight-color-main: $base-color-gray;
+
+
+/*
+* Component tokens
+*/
