@@ -105,4 +105,10 @@
     }
   }
 
+  @media print {
+    .Select {
+      display: none;
+    }
+  }
+
 </style>

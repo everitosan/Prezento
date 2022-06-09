@@ -48,4 +48,8 @@
       }
     }
   }
+
+  @media print {
+    nav { display: none;}
+  }
 </style>

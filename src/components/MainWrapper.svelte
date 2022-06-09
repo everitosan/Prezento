@@ -46,5 +46,17 @@
       padding: 1em;
     }
   }
+
+  @media print {
+    main {
+      height: auto;
+
+      .wrapper {
+        height: auto;
+        overflow: auto;
+        padding: 0.2cm;
+      }
+    }
+  }
 </style>
 
