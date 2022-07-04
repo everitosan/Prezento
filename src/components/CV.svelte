@@ -80,4 +80,10 @@
 			grid-row-end: 4;
 		}
 	}
+
+	@media print {
+    .cvWrapper {
+			grid-gap: 0em;
+    }
+  }
 </style>

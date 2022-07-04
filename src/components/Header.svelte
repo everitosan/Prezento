@@ -25,4 +25,10 @@
       justify-content: space-between;
     }
   }
+
+  @media print {
+    header {
+      padding: 0;
+    }
+  }
 </style>

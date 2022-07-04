@@ -55,4 +55,10 @@
 			font-size: 1.2em;
 		}
 	}
+
+	@media print {
+    .CodeBox {
+			font-size: 0.95em;
+    }
+  }
 </style>
