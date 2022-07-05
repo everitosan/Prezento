@@ -30,6 +30,7 @@
 
     a, a:visited {
       color: figma.$set-on-dark-color-comment;
+      text-decoration: none;
 
       &:hover {
         color: figma.$set-on-dark-color-contraste-live;
@@ -50,6 +51,6 @@
   }
 
   @media print {
-    nav { display: none;}
+    // nav { display: none;}
   }
 </style>

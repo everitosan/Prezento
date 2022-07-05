@@ -84,6 +84,24 @@
 	@media print {
     .cvWrapper {
 			grid-gap: 0em;
+			grid-template-columns: 1fr 1fr;
     }
+		.Box-0, .Box-1, .Box-2, .Box-3, .Box-4 {
+			grid-column: 1 / span 2;
+		}
+		.Box-5 {
+			grid-column-start: 2;
+		}
+		.Box-6 {
+			grid-column-start: 1;
+			grid-row-start: 6;
+		}
+
+		// // Column 3
+		// .Box-6 {
+		// 	grid-column-start: 3;
+		// 	grid-row-start: 1;
+		// 	grid-row-end: 4;
+		// }
   }
 </style>

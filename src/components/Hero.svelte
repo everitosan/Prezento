@@ -17,7 +17,6 @@
     font-size: 0.4em;
     text-align: center;
     padding: 5em 0;
-    // font-family: 'Arimo', sans-serif;
     font-family: HelveticaNeue-Light,-apple-system,AppleSDGothicNeo-Regular,'lucida grande',tahoma,verdana,arial,sans-serif,'Segoe UI Emoji','Segoe UI Symbol',Noto Color Emoji, NotoColorEmoji,EmojiSymbols,Symbola,Noto,'Android Emoji',AndroidEmoji,'Arial Unicode MS','Zapf Dingbats',AppleColorEmoji,'Apple Color Emoji';
   }
 
@@ -41,7 +40,8 @@
 
   @media print {
     h1 {
-      display: none;
+      font-size: 0.8em;
+      padding: 1em;
     }
   }
 
